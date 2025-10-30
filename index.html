@@ -32,6 +32,7 @@
       line-height: 1.7;
       min-height: 100vh;
       scroll-behavior: smooth;
+      font-size: clamp(0.94rem, calc(0.86rem + 0.3vw), 1.04rem);
     }
 
     a {
@@ -59,7 +60,7 @@
 
     .brand {
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1rem;
       letter-spacing: 0.05em;
       color: var(--accent);
       text-transform: uppercase;
@@ -68,8 +69,8 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.25rem;
-      font-size: 0.95rem;
+      gap: 1.15rem;
+      font-size: 0.88rem;
       font-weight: 500;
     }
 
@@ -113,7 +114,7 @@
 
     .hero {
       max-width: var(--max-width);
-      margin: 4rem auto 3rem;
+      margin: 3.5rem auto 3rem;
       padding: 0 1.25rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -124,30 +125,30 @@
     .hero-text {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 1.1rem;
     }
 
     .hero-text h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
       letter-spacing: 0.04em;
       color: var(--text-primary);
     }
 
     .hero-text p {
       color: var(--text-secondary);
-      font-size: 1.05rem;
+      font-size: clamp(0.98rem, 0.9rem + 0.3vw, 1.08rem);
     }
 
     .hero-pill {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.5rem 1rem;
+      padding: 0.45rem 0.95rem;
       border-radius: 999px;
       background: rgba(56, 189, 248, 0.12);
       color: var(--accent);
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       width: fit-content;
       box-shadow: 0 8px 24px -12px rgba(14, 165, 233, 0.5);
     }
@@ -168,10 +169,10 @@
 
     .hero-image img {
       position: relative;
-      width: min(320px, 80vw);
+      width: min(320px, 78vw);
       aspect-ratio: 1;
       object-fit: cover;
-      border-radius: 30px;
+      border-radius: 28px;
       border: 2px solid rgba(56, 189, 248, 0.4);
       box-shadow: 0 20px 45px -20px rgba(2, 132, 199, 0.55);
       z-index: 1;
@@ -179,7 +180,7 @@
 
     .content-section {
       max-width: var(--max-width);
-      margin: 0 auto 3.5rem;
+      margin: 0 auto 3.25rem;
       padding: 0 1.25rem;
     }
 
@@ -188,12 +189,12 @@
       border: 1px solid rgba(56, 189, 248, 0.12);
       box-shadow: 0 22px 45px -30px var(--shadow);
       border-radius: var(--radius);
-      padding: clamp(1.75rem, 2.5vw, 2.5rem);
+      padding: clamp(1.6rem, 2.2vw, 2.3rem);
     }
 
     h2.section-title {
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      margin-bottom: 1.25rem;
+      font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+      margin-bottom: 1.15rem;
       color: var(--text-primary);
       position: relative;
       display: inline-flex;
@@ -203,7 +204,7 @@
 
     h2.section-title::before {
       content: "";
-      width: 38px;
+      width: 36px;
       height: 4px;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--accent), var(--highlight));
@@ -218,7 +219,7 @@
     .goal-card {
       background: rgba(15, 23, 42, 0.6);
       border-radius: 18px;
-      padding: 1.75rem;
+      padding: 1.65rem;
       border: 1px solid rgba(56, 189, 248, 0.1);
       transition: transform var(--transition), border var(--transition), box-shadow var(--transition);
     }
@@ -231,22 +232,27 @@
 
     .goal-card h3 {
       color: var(--accent);
-      font-size: 1.2rem;
-      margin-bottom: 0.85rem;
+      font-size: clamp(1.05rem, 1rem + 0.25vw, 1.18rem);
+      margin-bottom: 0.75rem;
       letter-spacing: 0.02em;
+    }
+
+    .goal-card p {
+      font-size: clamp(0.96rem, 0.9rem + 0.25vw, 1.05rem);
+      color: var(--text-secondary);
     }
 
     .focus-list {
       display: grid;
       gap: 1.25rem;
-      margin-top: 1.5rem;
+      margin-top: 1.45rem;
     }
 
     .focus-item {
       display: flex;
       gap: 1rem;
       align-items: flex-start;
-      padding: 1.25rem 1.5rem;
+      padding: 1.15rem 1.35rem;
       background: rgba(15, 23, 42, 0.55);
       border-radius: 16px;
       border: 1px solid rgba(148, 163, 184, 0.12);
@@ -259,12 +265,23 @@
     }
 
     .focus-item span {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
+    }
+
+    .focus-item h3 {
+      font-size: clamp(1.02rem, 0.98rem + 0.25vw, 1.14rem);
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .focus-item p {
+      font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.02rem);
+      color: var(--text-secondary);
     }
 
     blockquote {
-      margin-top: 1.5rem;
-      padding: 1.75rem 2rem;
+      margin-top: 1.45rem;
+      padding: 1.6rem 1.8rem;
       background: linear-gradient(125deg, rgba(56, 189, 248, 0.15), rgba(15, 23, 42, 0.7));
       border-left: 4px solid var(--accent);
       border-radius: 18px;
@@ -272,19 +289,20 @@
     }
 
     blockquote p {
-      font-size: 1.05rem;
+      font-size: clamp(0.98rem, 0.92rem + 0.25vw, 1.08rem);
       color: var(--text-secondary);
     }
 
     blockquote footer {
-      margin-top: 0.8rem;
+      margin-top: 0.7rem;
       font-weight: 600;
       color: var(--accent);
+      font-size: 0.95rem;
     }
 
     .contact-card {
       display: grid;
-      gap: 1.25rem;
+      gap: 1.2rem;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
@@ -292,7 +310,7 @@
       display: flex;
       flex-direction: column;
       gap: 0.35rem;
-      padding: 1.15rem 1.35rem;
+      padding: 1.05rem 1.25rem;
       background: rgba(15, 23, 42, 0.65);
       border-radius: 16px;
       border: 1px solid rgba(56, 189, 248, 0.1);
@@ -306,28 +324,55 @@
     }
 
     .contact-label {
-      font-size: 0.9rem;
+      font-size: 0.84rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--text-secondary);
     }
 
     .contact-value {
-      font-size: 1.05rem;
+      font-size: clamp(0.98rem, 0.92rem + 0.25vw, 1.05rem);
       font-weight: 600;
       color: var(--text-primary);
       word-break: break-word;
     }
 
     footer {
-      margin: 4rem 0 2rem;
+      margin: 3.8rem 0 2rem;
       text-align: center;
       color: rgba(226, 232, 240, 0.65);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       padding: 0 1.25rem;
     }
 
-    /* Mobile tweaks */
+    @media (min-width: 992px) {
+      .card p,
+      .hero-text p,
+      .goal-card p,
+      .focus-item p,
+      blockquote p,
+      .contact-value {
+        font-size: 0.99rem;
+        line-height: 1.6;
+      }
+
+      .focus-item h3,
+      .goal-card h3 {
+        font-size: 1.06rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.55rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      nav ul {
+        position: static;
+        flex-direction: row;
+      }
+    }
+
     @media (max-width: 768px) {
       nav ul {
         position: absolute;
@@ -362,9 +407,7 @@
   <header>
     <div class="nav-container">
       <div class="brand">Swaid Athimannil</div>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">
-        ☰ Menu
-      </button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu Toggle">☰ Menu</button>
       <nav>
         <ul id="primary-nav">
           <li><a href="#about">About</a></li>
@@ -517,4 +560,4 @@
     });
   </script>
 </body>
-                                                       </html>
+</html>
