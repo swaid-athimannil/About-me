@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swaid Athimannil - Entrepreneur & Tech Enthusiast</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            animation: fadeIn 0.8s;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .focus-list {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .focus-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .focus-item strong {
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        blockquote {
+            background: #f8f9fa;
+            border-left: 4px solid #764ba2;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            border-radius: 5px;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+
+            section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Swaid Athimannil</div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#focus">Focus</a></li>
+                    <li><a href="#belief">Belief</a></li>
+                    <li><a href="#connect">Connect</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1>Swaid Athimannil</h1>
+            <p>Entrepreneur | Tech Enthusiast | Believer</p>
+        </div>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="content">
+                <p><strong>Assalamu Alaikum!</strong> I'm <strong>Swaid Athimannil</strong>, a 15-year-old ambitious Muslim entrepreneur with a passion for technology, innovation, and making a difference in the world. I believe that success is not just about personal achievement—it's about using what Allah has blessed you with to help others and contribute to the Ummah.</p>
+                
+                <p style="margin-top: 1.5rem;">I'm fascinated by the world of <strong>AI automation</strong> and <strong>digital technology</strong>. From a young age, I've been drawn to computers, not just as tools, but as gateways to endless possibilities. I love organizing, problem-solving, and building systems that make life easier and more efficient. Whether it's learning about the latest AI tools, exploring automation platforms like n8n, or studying how technology can solve real-world problems, I'm always eager to expand my knowledge.</p>
+                
+                <p style="margin-top: 1.5rem;">But beyond the tech, what drives me is <strong>faith</strong>. I strive to follow the teachings of Prophet Muhammad (ﷺ) in everything I do—treating people with honesty and kindness, staying humble, and remembering that all success comes from Allah. My ultimate goal isn't just to build wealth for myself, but to become financially successful <strong>for the sake of Allah</strong>, so I can give back to my community, support those in need, and create opportunities for others.</p>
+            </div>
+        </section>
+
+        <section id="goals">
+            <h2>Goals & Values</h2>
+            <div class="content">
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <h3>Entrepreneurship with Purpose</h3>
+                        <p>I'm building my path as an entrepreneur, not just to achieve financial freedom, but to create value and impact. I believe business should be conducted with <strong>integrity, transparency, and Islamic principles</strong> at its core. My vision is to establish ventures that combine cutting-edge technology with ethical practices, proving that you can be successful while staying true to your faith.</p>
+                    </div>
+                    
+                    <div class="goal-card">
+                        <h3>Faith-Driven Living</h3>
+                        <p>Islam is the foundation of everything I do. I believe in putting Allah first, being honest in my dealings, and practicing kindness and generosity. The Prophet Muhammad (ﷺ) taught us that the best among us are those who benefit others—and that's the legacy I want to build.</p>
+                    </div>
+                    
+                    <div class="goal-card">
+                        <h3>Helping Others</h3>
+                        <p>Wealth is a trust from Allah, and I believe it should be used to uplift others. Whether it's through charity, mentorship, or creating job opportunities, I want to use my success to make a positive impact on people's lives. Giving back isn't just a goal—it's a responsibility.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="focus">
+            <h2>Current Focus</h2>
+            <div class="content">
+                <p style="text-align: center; margin-bottom: 2rem;">Right now, I'm deeply immersed in:</p>
+                <div class="focus-list">
+                    <div class="focus-item">
+                        <strong>🤖 AI Automation</strong> – Learning how to harness artificial intelligence and automation tools to build scalable, efficient solutions. I work with platforms like n8n and explore how AI can transform businesses and everyday tasks.
+                    </div>
+                    
+                    <div class="focus-item">
+                        <strong>💻 Computer Science & Technology</strong> – Constantly learning digital systems, and emerging tech trends. I'm building a strong foundation in computer literacy that will serve me for life.
+                    </div>
+                    
+                    <div class="focus-item">
+                        <strong>📚 Continuous Learning</strong> – Whether it's through online courses, reading, or hands-on projects, I'm committed to learning something new every day. Knowledge is power, and I believe in investing in myself.
+                    </div>
+                    
+                    <div class="focus-item">
+                        <strong>🚀 Building Projects</strong> – Applying what I learn by creating real solutions, experimenting with automation workflows, and exploring entrepreneurial ventures that align with my values.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="belief">
+            <h2>A Belief That Guides Me</h2>
+            <div class="content">
+                <blockquote>
+                    <p>"Whoever does righteous deeds, whether male or female, while being a believer—those will enter Paradise."</p>
+                    <p><strong>— Quran 40:40</strong></p>
+                </blockquote>
+                
+                <p>This verse reminds me that success in this life is meaningless without faith and good deeds. True success is earning Allah's pleasure and the reward of Paradise. That's what I work toward every single day.</p>
+                
+                <p style="margin-top: 1.5rem;">Another principle I live by comes from the Prophet Muhammad (ﷺ):</p>
+                
+                <blockquote>
+                    <p>"The best of people are those who are most beneficial to others."</p>
+                </blockquote>
+                
+                <p>I want to be someone who leaves a positive mark on this world—through innovation, generosity, and service to humanity.</p>
+            </div>
+        </section>
+
+        <section id="connect">
+            <h2>Let's Connect</h2>
+            <div class="content">
+                <p style="text-align: center; margin-bottom: 2rem;">I'm always open to connecting with like-minded individuals, collaborating on projects, or just having a conversation about tech, faith, or entrepreneurship.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:athimannilswaid.personal+publicmail@gmail.com" class="contact-link">
+                        📧 Email
+                    </a>
+                    <a href="https://signal.me/#eu/wriv_1N_1rucwtvEJAFzFr5INOwSOg0LPjSaxlLlWgQfYvIjORtHDaahO4xU8w-W" class="contact-link" target="_blank">
+                        📡 Signal
+                    </a>
+                    <a href="https://www.instagram.com/swaid_athimannil?igsh=OWhjYnN5OXE4aHRv" class="contact-link" target="_blank">
+                        📸 Instagram
+                    </a>
+                    <a href="https://www.facebook.com/share/19gDXzj7ZK/" class="contact-link" target="_blank">
+                        🗣️ Facebook
+                    </a>
+                </div>
+                
+                <p style="text-align: center; margin-top: 2rem;">Feel free to reach out—I'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Swaid Athimannil. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Built with faith, purpose, and passion.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
