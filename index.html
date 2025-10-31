@@ -50,6 +50,7 @@
     }
 
     .nav-container {
+      position: relative;
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
@@ -110,6 +111,7 @@
       padding: 0.45rem 0.65rem;
       border-radius: 10px;
       font-size: 0.9rem;
+      cursor: pointer;
     }
 
     .hero {
@@ -182,6 +184,7 @@
       max-width: var(--max-width);
       margin: 0 auto 3.25rem;
       padding: 0 1.25rem;
+      scroll-margin-top: 80px;
     }
 
     .card {
@@ -366,7 +369,7 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 769px) {
       nav ul {
         position: static;
         flex-direction: row;
@@ -374,6 +377,13 @@
     }
 
     @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+      }
+
       nav ul {
         position: absolute;
         inset: 100% 0 auto 0;
@@ -399,6 +409,7 @@
         align-items: center;
         gap: 0.4rem;
         color: var(--text-secondary);
+        margin-left: auto;
       }
     }
   </style>
@@ -407,7 +418,7 @@
   <header>
     <div class="nav-container">
       <div class="brand">Swaid Athimannil</div>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu Toggle">☰ Menu</button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu Toggle">&#9776; Menu</button>
       <nav>
         <ul id="primary-nav">
           <li><a href="#about">About</a></li>
@@ -428,7 +439,7 @@
         <p><strong>Assalamu Alaikum!</strong> I'm Swaid, a 15-year-old Muslim entrepreneur driven by faith, technology, and the mission to uplift the Ummah. Guided by Islamic principles, I'm exploring AI automation, digital innovation, and ethical entrepreneurship—so success always means serving others.</p>
       </div>
       <div class="hero-image">
-        <img src="https://raw.githubusercontent.com/swaid-athimannil/About-me/2e4969525c832a9d0f5535ea35e92460cc15f523/1000007849_edited.jpeg" alt="Portrait of Swaid Athimannil">
+        <img src="https://raw.githubusercontent.com/swaid-athimannil/About-me/2e4969525c832a9d0f5535ea35e92460cc15f523/1000007849_edited.jpeg" alt="Portrait of Swaid Athimannil" loading="lazy">
       </div>
     </section>
 
@@ -515,7 +526,7 @@
     <section id="contact" class="content-section">
       <div class="card">
         <h2 class="section-title">Let's Connect</h2>
-        <p>If you share a passion for technology, faith, or purposeful entrepreneurship, I’d love to hear from you.</p>
+        <p>If you share a passion for technology, faith, or purposeful entrepreneurship, I'd love to hear from you.</p>
         <div class="contact-card">
           <a class="contact-link" href="mailto:athimannilswaid.personal+publicmail@gmail.com">
             <span class="contact-label">Email</span>
@@ -560,4 +571,4 @@
     });
   </script>
 </body>
-</html>
+  </html>
