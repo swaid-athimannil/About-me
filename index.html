@@ -76,14 +76,11 @@
 <meta name="twitter:image" content="https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/favicon.png">
   
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#C19A6B">
   <meta name="format-detection" content="telephone=no">
   
   <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://raw.githubusercontent.com">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
   
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
@@ -125,6 +122,516 @@
     }
   }
   </script>
+
+  <style>
+    :root {
+      --background: #faf8f5;
+      --card: #ffffff;
+      --accent: #C19A6B;
+      --accent-strong: #A67C52;
+      --text-primary: #2c2520;
+      --text-secondary: #5a4a3f;
+      --highlight: #d4a574;
+      --shadow: rgba(193, 154, 107, 0.15);
+      --border: rgba(193, 154, 107, 0.2);
+      --max-width: 1100px;
+      --radius: 20px;
+      --transition: 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #faf8f5 0%, #f5f0ea 50%, #faf8f5 100%);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      font-size: clamp(0.94rem, calc(0.86rem + 0.3vw), 1.04rem);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent-strong);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 200;
+      border-radius: 0 0 8px 0;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(193, 154, 107, 0.08);
+    }
+
+    .nav-container {
+      position: relative;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      color: var(--accent-strong);
+      text-transform: uppercase;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.15rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+
+    nav a {
+      position: relative;
+      padding-bottom: 0.35rem;
+      transition: var(--transition);
+      color: var(--text-secondary);
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: var(--transition);
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--accent-strong);
+    }
+
+    nav a:hover::after,
+    nav a:focus::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--accent);
+      color: var(--accent-strong);
+      padding: 0.45rem 0.65rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    main {
+      min-height: 50vh;
+    }
+
+    .hero {
+      max-width: var(--max-width);
+      margin: 3.5rem auto 3rem;
+      padding: 0 1.25rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      letter-spacing: 0.04em;
+      color: var(--text-primary);
+    }
+
+    .hero-text p {
+      color: var(--text-secondary);
+      font-size: clamp(0.98rem, 0.9rem + 0.3vw, 1.08rem);
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.15), rgba(212, 165, 116, 0.1));
+      color: var(--accent-strong);
+      font-weight: 600;
+      font-size: 0.9rem;
+      width: fit-content;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(193, 154, 107, 0.1);
+    }
+
+    .hero-image {
+      position: relative;
+      justify-self: center;
+    }
+
+    .hero-image::before {
+      content: "";
+      position: absolute;
+      inset: -12%;
+      background: radial-gradient(circle, rgba(193, 154, 107, 0.2), transparent 70%);
+      filter: blur(35px);
+      z-index: 0;
+    }
+
+    .hero-image img {
+      position: relative;
+      width: min(320px, 78vw);
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 28px;
+      border: 3px solid var(--accent);
+      box-shadow: 0 20px 45px -20px var(--shadow);
+      z-index: 1;
+    }
+
+    .content-section {
+      max-width: var(--max-width);
+      margin: 0 auto 3.25rem;
+      padding: 0 1.25rem;
+      scroll-margin-top: 80px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 24px rgba(193, 154, 107, 0.1);
+      border-radius: var(--radius);
+      padding: clamp(1.6rem, 2.2vw, 2.3rem);
+    }
+
+    h2.section-title {
+      font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+      margin-bottom: 1.15rem;
+      color: var(--text-primary);
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2.section-title::before {
+      content: "";
+      width: 36px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--highlight));
+    }
+
+    .goals-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .goal-card {
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.05), rgba(245, 240, 234, 0.5));
+      border-radius: 18px;
+      padding: 1.65rem;
+      border: 1px solid var(--border);
+      transition: transform var(--transition), border var(--transition), box-shadow var(--transition);
+    }
+
+    .goal-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      box-shadow: 0 16px 32px rgba(193, 154, 107, 0.2);
+    }
+
+    .goal-card h3 {
+      color: var(--accent-strong);
+      font-size: clamp(1.05rem, 1rem + 0.25vw, 1.18rem);
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .goal-card p {
+      font-size: clamp(0.96rem, 0.9rem + 0.25vw, 1.05rem);
+      color: var(--text-secondary);
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 1.45rem;
+    }
+
+    .focus-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.15rem 1.35rem;
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.03), rgba(255, 255, 255, 0.8));
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .focus-item:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(193, 154, 107, 0.15);
+    }
+
+    .focus-item span {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .focus-item h3 {
+      font-size: clamp(1.02rem, 0.98rem + 0.25vw, 1.14rem);
+      color: var(--text-primary);
+      margin-bottom: 0.35rem;
+    }
+
+    .focus-item p {
+      font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.02rem);
+      color: var(--text-secondary);
+    }
+
+    blockquote {
+      margin-top: 1.45rem;
+      padding: 1.6rem 1.8rem;
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.1), rgba(255, 255, 255, 0.6));
+      border-left: 4px solid var(--accent);
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+    }
+
+    blockquote p {
+      font-size: clamp(0.98rem, 0.92rem + 0.25vw, 1.08rem);
+      color: var(--text-secondary);
+    }
+
+    blockquote footer {
+      margin-top: 0.7rem;
+      font-weight: 600;
+      color: var(--accent-strong);
+      font-size: 0.95rem;
+    }
+
+    .cta-box {
+      margin-top: 1.75rem;
+      padding: 1.45rem 1.65rem;
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.12), rgba(255, 255, 255, 0.8));
+      border-radius: 16px;
+      border: 1px solid var(--accent);
+      text-align: center;
+    }
+
+    .cta-box p {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      margin-bottom: 0.85rem;
+    }
+
+    .cta-box a {
+      display: inline-block;
+      color: var(--accent-strong);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: var(--transition);
+      word-break: break-all;
+    }
+
+    .cta-box a:hover,
+    .cta-box a:focus {
+      color: var(--highlight);
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .contact-link {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding: 1.05rem 1.25rem;
+      background: linear-gradient(135deg, rgba(193, 154, 107, 0.05), rgba(255, 255, 255, 0.9));
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      border-color: var(--accent);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(193, 154, 107, 0.2);
+    }
+
+    .contact-link[rel="me"] {
+      border-color: var(--highlight);
+    }
+
+    .contact-label {
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+
+    .contact-value {
+      font-size: clamp(0.85rem, 0.92rem + 0.25vw, 1.05rem);
+      font-weight: 600;
+      color: var(--text-primary);
+      word-break: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    footer {
+      margin: 3.8rem 0 2rem;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      padding: 0 1.25rem;
+    }
+
+    @media (min-width: 992px) {
+      .card p,
+      .hero-text p,
+      .goal-card p,
+      .focus-item p,
+      blockquote p,
+      .contact-value {
+        font-size: 0.99rem;
+        line-height: 1.6;
+      }
+
+      .focus-item h3,
+      .goal-card h3 {
+        font-size: 1.06rem;
+      }
+
+      .hero-text h1 {
+        font-size: 2.55rem;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav ul {
+        position: static;
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+      }
+
+      nav ul {
+        position: absolute;
+        inset: 100% 0 auto 0;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 1rem 1.25rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 24px rgba(193, 154, 107, 0.15);
+        transform: scaleY(0);
+        transform-origin: top;
+        opacity: 0;
+        pointer-events: none;
+        transition: transform var(--transition), opacity var(--transition);
+      }
+
+      nav ul.active {
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--text-secondary);
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+      
+      .contact-value {
+        font-size: 0.85rem;
+      }
+    }
+      .copyright {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.copyright a {
+  color: var(--accent-strong);
+  text-decoration: underline;
+  transition: var(--transition);
+}
+
+.copyright a:hover,
+.copyright a:focus {
+  color: var(--accent);
+}
+  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -183,11 +690,11 @@
           </div>
           <div class="goal-card">
             <h3>Faith-Driven Living 🕌</h3>
-            <p>Islam is the foundation of everything I do ❤️. I try to practice honesty, humility, and kindness every single day 😊. The Prophet Muhammad (ﷺ) taught that the best people are those who benefit others 🌟. That's what I want my life to be about, Inshallah. May Allah help me stay on this path 🤲.</p>
+            <p>Islam is the foundation of everything I do ❤️. I try to practice honesty, truthfulness, and kindness every single day 😊. The Prophet Muhammad (ﷺ) taught that the best people are those who have good character 🌟. That's what I want my life to be about, Inshallah. May Allah help me stay on this path 🤲.</p>
           </div>
           <div class="goal-card">
             <h3>Helping Others 🤝</h3>
-            <p>Whatever I earn is a trust from Allah 💰. I want to use it to help my community and support those in need ❤️. Success means nothing if it doesn't benefit others 🌍. That's not something I'm doing now—it's something I'm working toward with all my heart, Inshallah 🙏. May Allah make me successful in serving humanity 🤲.</p>
+            <p>Whatever I earn is a trust from Allah 💰. I want to use it to help my community and support those in need ❤️. Success means nothing if it doesn't benefit others 🌍. It's something I'm working toward with all my heart, Inshallah 🙏. May Allah make me successful in serving humanity 🤲.</p>
           </div>
         </div>
       </article>
@@ -201,21 +708,21 @@
             <span role="img" aria-label="Robot">🤖</span>
             <div>
               <h3>AI Automation 💡</h3>
-              <p>I'm learning AI automation and tools like n8n to build workflows that can help businesses run better ✨. For example, I'm working on automated systems for lead generation and customer follow-ups 📧. It's so exciting to see how tech can make things easier for people! 😊</p>
+              <p>I'm learning AI automation and tools like n8n to build workflows that can help businesses run better ✨. For example, I'm working on automated systems for lead generation and customer support 📧. It's so exciting to see how tech can make things easier for people! 😊</p>
             </div>
           </div>
           <div class="focus-item">
             <span role="img" aria-label="Computer">💻</span>
             <div>
               <h3>Computer Science &amp; Technology 🚀</h3>
-              <p>I'm building my foundation in technology step by step, Alhamdulillah 📚. Right now, I'm exploring AI automation and tools like n8n to understand how technology can solve real problems in ethical and impactful ways ❤️. May Allah bless this learning journey 🤲.</p>
+              <p>I'm building my foundation in technology step by step, Alhamdulillah 📚. Right now, I'm exploring AI automation and tools like n8n to solve real problems in ethical and impactful ways ❤️. May Allah bless this learning journey 🤲.</p>
             </div>
           </div>
           <div class="focus-item">
             <span role="img" aria-label="Books">📚</span>
             <div>
               <h3>Continuous Learning 🌱</h3>
-              <p>I try to learn something new every day through reading and hands-on projects 😊. Knowledge is power, and I want to keep growing, Inshallah ✨. May Allah increase my knowledge and make it beneficial 🤲.</p>
+              <p>I try to learn something new every day through watching videos and hands-on projects 😊. Knowledge is power, and I want to keep growing, Inshallah ✨. May Allah increase my knowledge and make it beneficial 🤲.</p>
             </div>
           </div>
           <div class="focus-item">
@@ -233,8 +740,8 @@
       <article class="card">
         <h2 id="beliefs-title" class="section-title">Guiding Beliefs 🌟</h2>
         <blockquote cite="Quran 40:40">
-          <p><em>"Whoever does righteous deeds, whether male or female, while being a believer—those will enter Paradise." ✨</em></p>
-          <footer>— Quran 40:40 ❤️</footer>
+          <p><em>"The best of people are those who have good character." ✨</em></p>
+          <footer>— Prophet Muhammad (ﷺ) ❤️</footer>
         </blockquote>
         <blockquote>
           <p><em>"The best of people are those who are most beneficial to others." 🤝</em></p>
@@ -243,7 +750,7 @@
         <p>These words keep me grounded, Alhamdulillah ❤️. Success without faith and service is empty 💭. Every project, every goal, every step I take is to earn Allah's pleasure and help the people around me 🤲. AI automation and entrepreneurship are just tools to serve others—not to chase profit for its own sake 💰. May Allah keep me sincere in my intentions and guide me always 🙏.</p>
         
         <div class="cta-box">
-          <p><strong>Interested in partnering or mentoring? 🤝</strong></p>
+          <p><strong>Interested in partnering or mentoring me? 🤝</strong></p>
           <p>Email me at: <a href="mailto:athimannilswaid.personal+publicmail@gmail.com?subject=Collaboration%20(About-me)">athimannilswaid.personal+publicmail@gmail.com</a> 📧</p>
           <p>Subject line: <strong>Collaboration (About-me)</strong> ✨</p>
         </div>
@@ -259,12 +766,10 @@
             <span class="contact-label">Email 📧</span>
             <span class="contact-value">athimannilswaid.personal+publicmail@gmail.com</span>
           </a>
-          <a class="contact-link" href="https://signal.me/#eu/wriv_1N_1rucwtvEJAFzFr5INOwSOg0LPjSaxlLlWgQfYvIjORtHDaahO4xU8w-W" target="_blank" rel="noopener noreferrer" aria-label="Connect on Signal">
-            <span class="contact-label">Signal 💬</span>
-            <span class="contact-value">swaidathimannil.72</span>
-          </a>
+          
           <a class="contact-link" href="https://www.instagram.com/swaid_athimannil?igsh=OWhjYnN5OXE4aHRv" target="_blank" rel="noopener noreferrer me" aria-label="Follow on Instagram">
-            <span class="contact-label">Instagram 📸</span>
+            <span
+             class="contact-label">Instagram 📸</span>
             <span class="contact-value">@swaid_athimannil</span>
           </a>
           <a class="contact-link" href="https://www.facebook.com/share/19gDXzj7ZK/" target="_blank" rel="noopener noreferrer" aria-label="Connect on Facebook">
@@ -277,8 +782,11 @@
   </main>
 
   <footer role="contentinfo">
-    <p>Crafted with integrity, curiosity, and a little sparkle of automation ✨❤️</p>
-  </footer>
+  <p>Crafted with integrity, curiosity, and a little sparkle of automation ✨❤️</p>
+  <div class="copyright">
+    <p>© 2024–2025 <a href="https://swaid-athimannil.github.io/About-me/">Swaid Athimannil</a>. All rights reserved.</p>
+  </div>
+</footer>
 
   <script>
     const toggle = document.querySelector(".menu-toggle");
