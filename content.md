@@ -1,14 +1,37 @@
-# Site Configuration
+---
 name: Swaid Athimannil
 tagline: Evolving Muslim Innovator ✨
+title: Swaid Athimannil | Evolving Muslim Innovator & AI Entrepreneur
+description: Assalamualaikum! I am Swaid Athimannil, a 15-year-old Evolving Muslim Innovator. I explore AI automation, n8n, and entrepreneurship guided by Islamic values.
+keywords: Swaid Athimannil, AI automation, n8n workflows, Islamic entrepreneur, faith-driven technology, ethical AI, Muslim innovator
+url: https://swaid-athimannil.github.io/About-me/
 photo: https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/assets/MyPhoto.webp
 favicon: https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/favicon.png
 greeting: Assalamualaikum! ❤️
 intro: Hey! I'm Swaid — a 15-year-old who loves entrepreneurship and Islam. I enjoy creating meaningful projects with n8n and AI, striving to follow the example of Prophet Muhammad (ﷺ).
+footer: Crafted with integrity, curiosity, and a little sparkle of automation. ✨❤️
+---
+
+nav:
+- About: #about-me
+- Goals: #goals--values
+- Focus: #current-focus
+- Beliefs: #guiding-beliefs
+- Connect: #lets-connect
+
+---
+
+links:
+- 📧 Email Me: mailto:gag-zen-confront@duck.com?subject=Collaboration%20(About-me)
+- ▶️ YouTube: https://youtube.com/@swaidathimannil
+- 💼 LinkedIn: https://www.linkedin.com/in/swaid-athimannil-758a733b0
+- 📸 Instagram: https://www.instagram.com/swaid_athimannil
+- 👨‍💻 GitHub: https://github.com/swaid-athimannil
 
 ---
 
 # About Me 😊
+
 I'm still learning every day, Alhamdulillah 📚. I love technology, entrepreneurship, and striving to hold onto the beautiful character of the Prophet ﷺ ✨.
 
 Ever since I was little, I've been drawn to technology 💡. I actually started my tech journey around the COVID-19 days, when I began making fun little games using an app called Scratch 🎮.
@@ -18,6 +41,8 @@ My faith guides everything I do ❤️. I strive to follow the example of Prophe
 ---
 
 # Why This Website? 💭
+type: card
+
 I created this space to showcase my digital skills and share who I really am at heart ❤️. I wanted a platform where I could be transparent about what I'm learning, what I believe in, and the goals I am working toward 🎯.
 
 I make mistakes sometimes 😅, but I am always trying to learn from them and improve. This website is a truthful log of that journey—showing up, remaining consistent, and staying connected to my values while building something meaningful ✨.
@@ -27,6 +52,7 @@ I make mistakes sometimes 😅, but I am always trying to learn from them and im
 ---
 
 # Goals & Values 🎯
+type: cards
 
 ## Entrepreneurship with Purpose 💼
 I want to build businesses that create real value ❤️. I believe technology and ethics can work together beautifully. I am learning to innovate with AI automation while adhering to Islamic values and honest business practices, Inshallah 🤲.
@@ -35,11 +61,13 @@ I want to build businesses that create real value ❤️. I believe technology a
 Islam is the foundation of my life. I strive to practice honesty, truthfulness, and kindness every single day 😊. The Prophet Muhammad (ﷺ) taught that **"The best among you is the one who has the best character."** 🌟
 
 ## Helping Others 🤝
+full: true
 Whatever I earn is an Amanah (trust) from Allah 💰. My biggest dream is to use what I have to work toward Jannah. Success doesn't mean anything to me if it doesn't lead me closer to Jannah 🥺.
 
 ---
 
 # Current Focus 🔍
+type: cards
 
 ## AI Automation 💡
 I'm learning tools like **n8n** so I can build workflows that help businesses run more smoothly 🚀. Little by little, I'm getting more comfortable with automation.
@@ -50,6 +78,7 @@ I'm building my technical foundation step by step, Alhamdulillah 📚. My focus 
 ---
 
 # Guiding Beliefs 🌟
+type: quotes
 
 > "Whoever does righteous deeds, whether male or female, while being a believer—those will enter Paradise." ✨
 > — Quran 40:40 ❤️
@@ -62,14 +91,8 @@ These words keep me grounded, Alhamdulillah. Success without faith and service i
 ---
 
 # Let's Connect 💬
+type: connect
+
 If you are passionate about **technology 💻, faith ❤️, ethical entrepreneurship 🤝, or AI automation 🤖**, I would love to hear from you!
 
-## Links
-- 📧 Email: mailto:gag-zen-confront@duck.com?subject=Collaboration%20(About-me)
-- ▶️ YouTube: https://youtube.com/@swaidathimannil
-- 💼 LinkedIn: https://www.linkedin.com/in/swaid-athimannil-758a733b0
-
----
-
-# Footer
-Crafted with integrity, curiosity, and a little sparkle of automation. ✨❤️
+- Email: hi, im testing my web
