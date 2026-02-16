@@ -1,684 +1,177 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="google-site-verification" content="cvUllnIxcDcp0GqPZUlQuOFdkOeY_BJwXVfiFm5jF-A">
-    <meta name="msvalidate.01" content="7017A9A70A8AC2655AE204D211892478">
-
-    <title>Swaid Athimannil | Evolving Muslim Innovator & AI Entrepreneur</title>
-    <meta name="description" content="Assalamualaikum! I am Swaid Athimannil, a 15-year-old Evolving Muslim Innovator. I explore AI automation, n8n, and entrepreneurship guided by Islamic values.">
-    <meta name="keywords" content="Swaid Athimannil, AI automation, n8n workflows, Islamic entrepreneur, faith-driven technology, ethical AI, Muslim innovator">
-    <meta name="author" content="Swaid Athimannil">
+    <meta id="meta-description" name="description" content="">
+    <meta id="meta-keywords" name="keywords" content="">
+    <meta name="author" content="">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://swaid-athimannil.github.io/About-me/">
-    
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/favicon.png">
-    
+    <link id="meta-canonical" rel="canonical" href="">
+    <link id="favicon" rel="icon" type="image/png" href="">
+    <meta id="og-title" property="og:title" content="">
+    <meta id="og-description" property="og:description" content="">
+    <meta id="og-image" property="og:image" content="">
+    <meta id="og-url" property="og:url" content="">
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://swaid-athimannil.github.io/About-me/">
-    <meta property="og:title" content="Swaid Athimannil | Evolving Muslim Innovator & AI Entrepreneur">
-    <meta property="og:description" content="15-year-old AI automation specialist and Islamic entrepreneur.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/assets/MyPhoto.webp">
-    
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Swaid Athimannil | Evolving Muslim Innovator & AI Entrepreneur">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/swaid-athimannil/About-me/refs/heads/main/assets/MyPhoto.webp">
-
+    <title>Loading...</title>
     <style>
-        :root {
-            --primary-camel: #C19A6B;
-            --dark-brown: #5C4033;
-            --light-cream: #FDF8F4;
-            --bg-color: #FAFAFA;
-            --card-bg: #FFFFFF;
-            --text-main: #1F2937;
-            --text-muted: #4B5563;
-            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --header-height: 70px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); }
-
-        body {
-            font-family: var(--font-main);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-            font-size: 16px;
-            min-height: 100vh;
-        }
-
-        /* Loading State */
-        .loading {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            gap: 20px;
-        }
-
-        .loading-spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid var(--light-cream);
-            border-top-color: var(--primary-camel);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .error-message {
-            text-align: center;
-            padding: 40px;
-            color: #dc2626;
-        }
-
-        /* Header */
-        header.sticky-nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            height: var(--header-height);
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        .nav-container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: var(--dark-brown);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .nav-logo-favicon {
-            width: 28px;
-            height: 28px;
-            object-fit: contain;
-        }
-
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-main);
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--primary-camel); }
-
-        @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-
-            .nav-links {
-                position: absolute;
-                top: var(--header-height);
-                left: 0;
-                width: 100%;
-                background: white;
-                flex-direction: column;
-                gap: 0;
-                border-bottom: 1px solid #eee;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in-out;
-            }
-
-            .nav-links.active { max-height: 400px; }
-
-            .nav-links li { width: 100%; }
-
-            .nav-links a {
-                display: block;
-                padding: 15px 20px;
-                border-bottom: 1px solid #f9f9f9;
-            }
-            
-            .nav-links a:hover { background-color: var(--light-cream); }
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        section {
-            margin-bottom: 60px;
-            padding-top: 20px;
-        }
-
-        h1, h2, h3 {
-            color: var(--text-main);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        h1 { font-size: 2rem; }
-        
-        h2 { 
-            font-size: 1.5rem; 
-            color: var(--dark-brown); 
-            border-bottom: 2px solid var(--primary-camel); 
-            display: inline-block; 
-            padding-bottom: 5px; 
-            margin-bottom: 25px; 
-        }
-        
-        h3 { font-size: 1.25rem; color: var(--text-main); margin-top: 15px; }
-
-        p { margin-bottom: 1rem; color: var(--text-muted); }
-
-        .hero {
-            text-align: center;
-            padding: 60px 20px 40px;
-            background: linear-gradient(to bottom, #ffffff, var(--light-cream));
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .profile-img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 10px 25px rgba(193, 154, 107, 0.2);
-            margin-bottom: 20px;
-        }
-
-        .tagline {
-            color: var(--primary-camel);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .arabic-greeting {
-            font-size: 1.5rem;
-            color: var(--dark-brown);
-            margin-bottom: 10px;
-            font-family: serif; 
-        }
-
-        .grid {
-            display: grid;
-            gap: 20px;
-            grid-template-columns: 1fr;
-        }
-
-        .card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f3f4f6;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            border-color: var(--primary-camel);
-        }
-
-        .card.full-width { grid-column: 1 / -1; }
-
-        blockquote {
-            background: var(--light-cream);
-            border-left: 5px solid var(--primary-camel);
-            margin: 20px 0;
-            padding: 20px;
-            font-style: italic;
-            border-radius: 4px;
-        }
-
-        blockquote cite {
-            display: block;
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--dark-brown);
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            background-color: var(--card-bg);
-            border: 1px solid #e5e7eb;
-            color: var(--text-main);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn:hover {
-            background-color: var(--light-cream);
-            border-color: var(--primary-camel);
-            color: var(--dark-brown);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 40px;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
-            h1 { font-size: 2.5rem; }
-            .contact-links { flex-direction: row; flex-wrap: wrap; }
-        }
-
-        .content-section p strong {
-            color: var(--text-main);
-        }
-
-        .content-section p em {
-            color: var(--dark-brown);
-        }
+        :root{--primary:#C19A6B;--dark:#5C4033;--cream:#FDF8F4;--bg:#FAFAFA;--card:#FFF;--text:#1F2937;--muted:#4B5563;--header:70px}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:var(--header)}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;min-height:100vh}.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;gap:20px}.spinner{width:50px;height:50px;border:4px solid var(--cream);border-top-color:var(--primary);border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.error{text-align:center;padding:40px;color:#dc2626}header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);box-shadow:0 2px 10px rgba(0,0,0,.05);height:var(--header);display:flex;align-items:center;border-bottom:1px solid #eee}.nav-container{width:100%;max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}.nav-logo{font-weight:700;font-size:1.2rem;color:var(--dark);text-decoration:none;display:flex;align-items:center;gap:10px}.nav-logo img{width:28px;height:28px;object-fit:contain}.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text)}.nav-links{list-style:none;display:flex;gap:25px}.nav-links a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;transition:color .3s}.nav-links a:hover{color:var(--primary)}@media(max-width:768px){.menu-toggle{display:block}.nav-links{position:absolute;top:var(--header);left:0;width:100%;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid #eee;box-shadow:0 4px 6px rgba(0,0,0,.05);max-height:0;overflow:hidden;transition:max-height .3s}.nav-links.active{max-height:400px}.nav-links li{width:100%}.nav-links a{display:block;padding:15px 20px;border-bottom:1px solid #f9f9f9}.nav-links a:hover{background:var(--cream)}}.container{max-width:800px;margin:0 auto;padding:0 20px}section{margin-bottom:60px;padding-top:20px}h1,h2,h3{color:var(--text);font-weight:700;margin-bottom:1rem;line-height:1.3}h1{font-size:2rem}h2{font-size:1.5rem;color:var(--dark);border-bottom:2px solid var(--primary);display:inline-block;padding-bottom:5px;margin-bottom:25px}h3{font-size:1.25rem;margin-top:15px}p{margin-bottom:1rem;color:var(--muted)}.hero{text-align:center;padding:60px 20px 40px;background:linear-gradient(to bottom,#fff,var(--cream));border-bottom:1px solid #e5e7eb}.profile-img{width:160px;height:160px;object-fit:cover;border-radius:50%;border:4px solid #fff;box-shadow:0 10px 25px rgba(193,154,107,.2);margin-bottom:20px}.tagline{color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:1px;font-size:.9rem;margin-bottom:10px;display:block}.greeting{font-size:1.5rem;color:var(--dark);margin-bottom:10px;font-family:serif}.grid{display:grid;gap:20px;grid-template-columns:1fr}.card{background:var(--card);padding:25px;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.05);border:1px solid #f3f4f6;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-3px);border-color:var(--primary)}.card.full{grid-column:1/-1}blockquote{background:var(--cream);border-left:5px solid var(--primary);margin:20px 0;padding:20px;font-style:italic;border-radius:4px}blockquote cite{display:block;margin-top:10px;font-size:.9rem;color:var(--dark);font-weight:600;font-style:normal}.contact-links{display:flex;flex-direction:column;gap:15px;margin-top:20px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:8px;font-weight:600;background:var(--card);border:1px solid #e5e7eb;color:var(--text);box-shadow:0 1px 2px rgba(0,0,0,.05);text-decoration:none;transition:all .3s}.btn:hover{background:var(--cream);border-color:var(--primary);color:var(--dark)}footer{text-align:center;padding:40px 20px;margin-top:40px;border-top:1px solid #e5e7eb;font-size:.9rem;color:var(--muted)}@media(min-width:768px){.grid{grid-template-columns:repeat(2,1fr)}h1{font-size:2.5rem}.contact-links{flex-direction:row;flex-wrap:wrap}}strong{color:var(--text)}em{color:var(--dark)}
     </style>
 </head>
 <body>
-    <div id="app">
-        <div class="loading">
-            <div class="loading-spinner"></div>
-            <p>Loading content...</p>
-        </div>
-    </div>
-
+    <div id="app"><div class="loading"><div class="spinner"></div><p>Loading...</p></div></div>
     <script>
-        // Content Parser and Renderer
-        class ContentLoader {
-            constructor() {
-                this.config = {};
-                this.sections = [];
-            }
-
-            async load(url = 'content.md') {
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) throw new Error('Failed to load content.md');
-                    const text = await response.text();
-                    this.parse(text);
-                    this.render();
-                } catch (error) {
-                    document.getElementById('app').innerHTML = `
-                        <div class="error-message">
-                            <h2>⚠️ Error Loading Content</h2>
-                            <p>${error.message}</p>
-                            <p>Make sure <code>content.md</code> is in the same directory as this file.</p>
-                        </div>
-                    `;
-                }
-            }
-
-            parse(text) {
-                const blocks = text.split('\n---\n');
-                
-                // Parse first block as config
-                const configBlock = blocks[0];
-                const configLines = configBlock.split('\n');
-                
-                configLines.forEach(line => {
-                    if (line.startsWith('# ')) return; // Skip header
-                    const match = line.match(/^(\w+):\s*(.+)$/);
-                    if (match) {
-                        this.config[match[1]] = match[2].trim();
-                    }
-                });
-
-                // Parse remaining blocks as sections
-                for (let i = 1; i < blocks.length; i++) {
-                    const block = blocks[i].trim();
-                    const lines = block.split('\n');
-                    const headerLine = lines.find(l => l.startsWith('# '));
-                    
-                    if (headerLine) {
-                        const title = headerLine.replace('# ', '');
-                        const content = lines.filter(l => !l.startsWith('# ')).join('\n').trim();
-                        
-                        this.sections.push({
-                            title,
-                            content,
-                            id: this.slugify(title)
-                        });
-                    }
-                }
-            }
-
-            slugify(text) {
-                return text.toLowerCase()
-                    .replace(/[^\w\s-]/g, '')
-                    .replace(/\s+/g, '-')
-                    .trim();
-            }
-
-            parseInlineMarkdown(text) {
-                return text
-                    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-                    .replace(/`(.+?)`/g, '<code>$1</code>');
-            }
-
-            renderSection(section) {
-                const content = section.content;
-                
-                // Check if it's the connect section with links
-                if (section.title.includes('Connect')) {
-                    return this.renderConnectSection(section);
-                }
-                
-                // Check if section has cards (subsections with ##)
-                if (content.includes('## ')) {
-                    return this.renderCardsSection(section);
-                }
-                
-                // Check for blockquotes
-                if (content.includes('> ')) {
-                    return this.renderQuotesSection(section);
-                }
-                
-                // Check if it's the "Why" section (single card)
-                if (section.title.includes('Why')) {
-                    return this.renderCardSection(section);
-                }
-
-                // Default text section
-                return this.renderTextSection(section);
-            }
-
-            renderTextSection(section) {
-                const paragraphs = section.content
-                    .split('\n\n')
-                    .filter(p => p.trim())
-                    .map(p => `<p>${this.parseInlineMarkdown(p)}</p>`)
-                    .join('');
-                
-                return `
-                    <section id="${section.id}" class="content-section">
-                        <h2>${section.title}</h2>
-                        ${paragraphs}
-                    </section>
-                `;
-            }
-
-            renderCardSection(section) {
-                const paragraphs = section.content
-                    .split('\n\n')
-                    .filter(p => p.trim())
-                    .map(p => `<p>${this.parseInlineMarkdown(p)}</p>`)
-                    .join('');
-                
-                return `
-                    <section id="${section.id}">
-                        <h2>${section.title}</h2>
-                        <div class="card">
-                            ${paragraphs}
-                        </div>
-                    </section>
-                `;
-            }
-
-            renderCardsSection(section) {
-                const parts = section.content.split('## ').filter(p => p.trim());
-                const cards = parts.map((part, index) => {
-                    const lines = part.split('\n');
-                    const cardTitle = lines[0].trim();
-                    const cardContent = lines.slice(1).join('\n').trim();
-                    const paragraphs = cardContent
-                        .split('\n\n')
-                        .filter(p => p.trim())
-                        .map(p => `<p>${this.parseInlineMarkdown(p)}</p>`)
-                        .join('');
-                    
-                    // Make last card full width if odd number
-                    const isLastOdd = (parts.length % 2 === 1) && (index === parts.length - 1);
-                    
-                    return `
-                        <div class="card ${isLastOdd ? 'full-width' : ''}">
-                            <h3>${cardTitle}</h3>
-                            ${paragraphs}
-                        </div>
-                    `;
-                }).join('');
-
-                return `
-                    <section id="${section.id}">
-                        <h2>${section.title}</h2>
-                        <div class="grid">
-                            ${cards}
-                        </div>
-                    </section>
-                `;
-            }
-
-            renderQuotesSection(section) {
-                const lines = section.content.split('\n');
-                let html = '';
-                let currentQuote = [];
-                
-                lines.forEach(line => {
-                    if (line.startsWith('> ')) {
-                        const text = line.replace('> ', '');
-                        if (text.startsWith('—') || text.startsWith('-')) {
-                            // This is a citation
-                            const cite = text.replace(/^[—-]\s*/, '');
-                            html += `
-                                <blockquote>
-                                    ${currentQuote.map(q => this.parseInlineMarkdown(q)).join('<br>')}
-                                    <cite>— ${cite}</cite>
-                                </blockquote>
-                            `;
-                            currentQuote = [];
-                        } else {
-                            currentQuote.push(text);
-                        }
-                    } else if (line.trim() && !line.startsWith('>')) {
-                        html += `<p>${this.parseInlineMarkdown(line)}</p>`;
-                    }
-                });
-
-                return `
-                    <section id="${section.id}">
-                        <h2>${section.title}</h2>
-                        ${html}
-                    </section>
-                `;
-            }
-
-            renderConnectSection(section) {
-                const lines = section.content.split('\n');
-                let introParagraphs = [];
-                let links = [];
-                let inLinks = false;
-
-                lines.forEach(line => {
-                    if (line.startsWith('## Links')) {
-                        inLinks = true;
-                        return;
-                    }
-                    if (inLinks && line.startsWith('- ')) {
-                        const linkText = line.replace('- ', '');
-                        const match = linkText.match(/(.+?):\s*(.+)/);
-                        if (match) {
-                            links.push({
-                                label: match[1].trim(),
-                                url: match[2].trim()
-                            });
-                        }
-                    } else if (!inLinks && line.trim()) {
-                        introParagraphs.push(line);
-                    }
-                });
-
-                const introHtml = introParagraphs
-                    .map(p => `<p>${this.parseInlineMarkdown(p)}</p>`)
-                    .join('');
-
-                const linksHtml = links
-                    .map(link => `
-                        <a href="${link.url}" 
-                           class="btn"
-                           ${link.url.startsWith('mailto:') ? '' : 'target="_blank" rel="noopener noreferrer"'}>
-                            ${link.label}
-                        </a>
-                    `)
-                    .join('');
-
-                return `
-                    <section id="${section.id}">
-                        <h2>${section.title}</h2>
-                        ${introHtml}
-                        <div class="contact-links">
-                            ${linksHtml}
-                        </div>
-                    </section>
-                `;
-            }
-
-            getNavItems() {
-                return this.sections
-                    .filter(s => !s.title.includes('Footer'))
-                    .map(s => ({
-                        id: s.id,
-                        title: s.title.replace(/[^\w\s]/g, '').trim()
-                    }));
-            }
-
-            render() {
-                const navItems = this.getNavItems();
-                const footerSection = this.sections.find(s => s.title.includes('Footer'));
-                const footerText = footerSection ? footerSection.content : '';
-
-                const navLinksHtml = navItems
-                    .map(item => `<li><a href="#${item.id}">${item.title}</a></li>`)
-                    .join('');
-
-                const sectionsHtml = this.sections
-                    .filter(s => !s.title.includes('Footer'))
-                    .map(s => this.renderSection(s))
-                    .join('');
-
-                document.getElementById('app').innerHTML = `
-                    <header class="sticky-nav">
-                        <nav class="nav-container">
-                            <a href="#" class="nav-logo">
-                                <img src="${this.config.favicon}" alt="Logo" class="nav-logo-favicon" width="28" height="28">
-                                <span>${this.config.name}</span>
-                            </a>
-                            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
-                            <ul class="nav-links" id="navLinks">
-                                ${navLinksHtml}
-                            </ul>
-                        </nav>
-                    </header>
-
-                    <div class="hero">
-                        <div class="container">
-                            <img src="${this.config.photo}" alt="${this.config.name}" class="profile-img" width="160" height="160">
-                            <span class="tagline">${this.config.tagline}</span>
-                            <h1>${this.config.name}</h1>
-                            <div class="arabic-greeting"><strong>${this.config.greeting}</strong></div>
-                            <p>${this.parseInlineMarkdown(this.config.intro)}</p>
-                        </div>
-                    </div>
-
-                    <main class="container">
-                        ${sectionsHtml}
-                    </main>
-
-                    <footer>
-                        <div class="container">
-                            <p>${this.parseInlineMarkdown(footerText)}</p>
-                            <p style="margin-top: 10px; font-size: 0.8rem;">© ${new Date().getFullYear()} ${this.config.name}. All Rights Reserved.</p>
-                        </div>
-                    </footer>
-                `;
-
-                this.initMobileMenu();
-            }
-
-            initMobileMenu() {
-                const menuToggle = document.getElementById('menuToggle');
-                const navLinks = document.getElementById('navLinks');
-
-                menuToggle.addEventListener('click', () => {
-                    const isActive = navLinks.classList.toggle('active');
-                    menuToggle.textContent = isActive ? '✕' : '☰';
-                });
-
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        navLinks.classList.remove('active');
-                        menuToggle.textContent = '☰';
+    (async()=>{
+        const app=document.getElementById('app');
+        let config={},nav=[],links=[],sections=[];
+        
+        const slug=t=>t.toLowerCase().replace(/[^\w\s-]/g,'').replace(/\s+/g,'-').trim();
+        const md=t=>t.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>');
+        
+        try{
+            const res=await fetch('content.md');
+            if(!res.ok)throw new Error('Cannot load content.md');
+            const text=await res.text();
+            const blocks=text.split('\n---\n');
+            
+            // Parse config (first block)
+            blocks[0].split('\n').forEach(line=>{
+                const m=line.match(/^(\w+):\s*(.+)$/);
+                if(m)config[m[1]]=m[2].trim();
+            });
+            
+            // Parse nav and links
+            blocks.forEach(block=>{
+                if(block.trim().startsWith('nav:')){
+                    block.split('\n').slice(1).forEach(line=>{
+                        const m=line.match(/^-\s*(.+?):\s*(.+)$/);
+                        if(m)nav.push({label:m[1].trim(),href:m[2].trim()});
                     });
+                }else if(block.trim().startsWith('links:')){
+                    block.split('\n').slice(1).forEach(line=>{
+                        const m=line.match(/^-\s*(.+?):\s*(.+)$/);
+                        if(m)links.push({label:m[1].trim(),url:m[2].trim()});
+                    });
+                }else if(block.includes('# ')){
+                    const lines=block.split('\n');
+                    const titleLine=lines.find(l=>l.startsWith('# '));
+                    if(titleLine){
+                        const title=titleLine.replace('# ','');
+                        const typeLine=lines.find(l=>l.startsWith('type:'));
+                        const type=typeLine?typeLine.replace('type:','').trim():'text';
+                        const content=lines.filter(l=>!l.startsWith('# ')&&!l.startsWith('type:')).join('\n').trim();
+                        sections.push({title,type,content,id:slug(title)});
+                    }
+                }
+            });
+            
+            // Update meta tags
+            document.title=config.title||config.name;
+            document.getElementById('meta-description').content=config.description||'';
+            document.getElementById('meta-keywords').content=config.keywords||'';
+            document.getElementById('meta-canonical').href=config.url||'';
+            document.getElementById('favicon').href=config.favicon||'';
+            document.getElementById('og-title').content=config.title||config.name;
+            document.getElementById('og-description').content=config.description||'';
+            document.getElementById('og-image').content=config.photo||'';
+            document.getElementById('og-url').content=config.url||'';
+            
+            // Render functions
+            const renderText=s=>{
+                const p=s.content.split('\n\n').filter(x=>x.trim()).map(x=>`<p>${md(x)}</p>`).join('');
+                return `<section id="${s.id}"><h2>${s.title}</h2>${p}</section>`;
+            };
+            
+            const renderCard=s=>{
+                const p=s.content.split('\n\n').filter(x=>x.trim()).map(x=>`<p>${md(x)}</p>`).join('');
+                return `<section id="${s.id}"><h2>${s.title}</h2><div class="card">${p}</div></section>`;
+            };
+            
+            const renderCards=s=>{
+                const cards=s.content.split('## ').filter(x=>x.trim()).map(part=>{
+                    const lines=part.split('\n');
+                    const title=lines[0].trim();
+                    const fullLine=lines.find(l=>l.startsWith('full:'));
+                    const isFull=fullLine&&fullLine.includes('true');
+                    const content=lines.slice(1).filter(l=>!l.startsWith('full:')).join('\n').trim();
+                    const p=content.split('\n\n').filter(x=>x.trim()).map(x=>`<p>${md(x)}</p>`).join('');
+                    return `<div class="card${isFull?' full':''}"><h3>${title}</h3>${p}</div>`;
+                }).join('');
+                return `<section id="${s.id}"><h2>${s.title}</h2><div class="grid">${cards}</div></section>`;
+            };
+            
+            const renderQuotes=s=>{
+                let html='',quote=[];
+                s.content.split('\n').forEach(line=>{
+                    if(line.startsWith('> ')){
+                        const t=line.slice(2);
+                        if(t.startsWith('—')||t.startsWith('-')){
+                            html+=`<blockquote>${quote.map(q=>md(q)).join('<br>')}<cite>${t}</cite></blockquote>`;
+                            quote=[];
+                        }else quote.push(t);
+                    }else if(line.trim())html+=`<p>${md(line)}</p>`;
                 });
-            }
+                return `<section id="${s.id}"><h2>${s.title}</h2>${html}</section>`;
+            };
+            
+            const renderConnect=s=>{
+                const p=s.content.split('\n\n').filter(x=>x.trim()).map(x=>`<p>${md(x)}</p>`).join('');
+                const btns=links.map(l=>`<a href="${l.url}" class="btn" ${l.url.startsWith('mailto:')?'':'target="_blank" rel="noopener noreferrer"'}>${l.label}</a>`).join('');
+                return `<section id="${s.id}"><h2>${s.title}</h2>${p}<div class="contact-links">${btns}</div></section>`;
+            };
+            
+            const render=s=>{
+                if(s.type==='card')return renderCard(s);
+                if(s.type==='cards')return renderCards(s);
+                if(s.type==='quotes')return renderQuotes(s);
+                if(s.type==='connect')return renderConnect(s);
+                return renderText(s);
+            };
+            
+            // Build HTML
+            const navHtml=nav.map(n=>`<li><a href="${n.href}">${n.label}</a></li>`).join('');
+            const sectionsHtml=sections.map(render).join('');
+            
+            app.innerHTML=`
+                <header>
+                    <nav class="nav-container">
+                        <a href="#" class="nav-logo">
+                            <img src="${config.favicon}" alt="Logo">
+                            <span>${config.name}</span>
+                        </a>
+                        <button class="menu-toggle" id="menuToggle">☰</button>
+                        <ul class="nav-links" id="navLinks">${navHtml}</ul>
+                    </nav>
+                </header>
+                <div class="hero">
+                    <div class="container">
+                        <img src="${config.photo}" alt="${config.name}" class="profile-img">
+                        <span class="tagline">${config.tagline}</span>
+                        <h1>${config.name}</h1>
+                        <div class="greeting"><strong>${config.greeting}</strong></div>
+                        <p>${md(config.intro)}</p>
+                    </div>
+                </div>
+                <main class="container">${sectionsHtml}</main>
+                <footer>
+                    <div class="container">
+                        <p>${md(config.footer)}</p>
+                        <p style="margin-top:10px;font-size:.8rem">© ${new Date().getFullYear()} ${config.name}. All Rights Reserved.</p>
+                    </div>
+                </footer>`;
+            
+            // Mobile menu
+            const toggle=document.getElementById('menuToggle');
+            const navEl=document.getElementById('navLinks');
+            toggle.onclick=()=>{const a=navEl.classList.toggle('active');toggle.textContent=a?'✕':'☰';};
+            document.querySelectorAll('.nav-links a').forEach(a=>a.onclick=()=>{navEl.classList.remove('active');toggle.textContent='☰';});
+            
+        }catch(e){
+            app.innerHTML=`<div class="error"><h2>⚠️ Error</h2><p>${e.message}</p><p>Make sure <code>content.md</code> exists in the same folder.</p></div>`;
         }
-
-        // Initialize
-        const loader = new ContentLoader();
-        loader.load('content.md');
+    })();
     </script>
 </body>
 </html>
