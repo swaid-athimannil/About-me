@@ -68,8 +68,6 @@ If you are passionate about **technology 💻, faith ❤️, ethical entrepreneu
 - 📧 Email: mailto:gag-zen-confront@duck.com?subject=Collaboration%20(About-me)
 - ▶️ YouTube: https://youtube.com/@swaidathimannil
 - 💼 LinkedIn: https://www.linkedin.com/in/swaid-athimannil-758a733b0
-- 📸 Instagram: https://www.instagram.com/swaid_athimannil
-- 👨‍💻 GitHub: https://github.com/swaid-athimannil
 
 ---
 
