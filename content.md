@@ -94,5 +94,3 @@ These words keep me grounded, Alhamdulillah. Success without faith and service i
 type: connect
 
 If you are passionate about **technology 💻, faith ❤️, ethical entrepreneurship 🤝, or AI automation 🤖**, I would love to hear from you!
-
-- Email: hi, im testing my web
